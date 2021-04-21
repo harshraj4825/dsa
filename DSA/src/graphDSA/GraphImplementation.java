@@ -11,7 +11,7 @@ public class GraphImplementation {
 		graph.addEdge(1, 2, false);
 		graph.addEdge(2, 3, true);
 		graph.addEdge(1, 3, false);
-		System.out.println("Adjacency of Matrix of unweighted Graph Graph");
+		System.out.println("Adjacency of Matrix of un_weighted Graph Graph");
 		System.out.println(graph.toString());
 		System.out.println("After removing");
 		graph.removeEdge(1, 2, false);
@@ -32,6 +32,20 @@ public class GraphImplementation {
 		W_graph.removeEdge(1, 2, false);
 		W_graph.removeEdge(2, 3, true);
 		System.out.println(W_graph.toString());
+		
+		//Adjacency of un_weighted Graph using map
+		//map because storage efficient
+		AdjacencyListGraph_Map alGraph=new AdjacencyListGraph_Map();
+		alGraph.addEdge(0, 1, false);
+		alGraph.addEdge(0, 3, false);
+		alGraph.addEdge(1, 2, false);
+		alGraph.addEdge(2, 3, true);
+		alGraph.addEdge(1, 3, false);
+		System.out.println("Adjacency of Matrix of un_weighted Graph Graph");
+		System.out.println(alGraph.toString());
+		
+
+		
 	}
 	
 	
