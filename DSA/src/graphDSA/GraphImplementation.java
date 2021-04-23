@@ -44,6 +44,19 @@ public class GraphImplementation {
 		System.out.println("AdjacencyList of un_weighted Graph");
 		System.out.println(alGraph.toString());
 		
+		//AdjacencyList of un_weighted Graph using Array --> ArrayList<Integer> G[]
+		AdjacencyListUsingArray alGArr=new AdjacencyListUsingArray(4);
+		alGArr.addEdge(0, 1, false);
+		alGArr.addEdge(0, 3, false);
+		alGArr.addEdge(1, 2, false);
+		alGArr.addEdge(2, 3, true);
+		alGArr.addEdge(1, 3, false);
+		System.out.println("\nAdjacencyList of un_weighted Graph using Array");
+		System.out.println(alGArr.toString());
+		
+		alGArr.removeEdge(2, 3, true);
+		
+		System.out.println(alGArr.toString());
 
 		
 	}
