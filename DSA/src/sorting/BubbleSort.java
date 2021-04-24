@@ -6,6 +6,10 @@ import java.util.Arrays;
 	 * then you will get last element 
 	 */
 public class BubbleSort {
+	/*
+	 * T.C =O(n^2)
+	 * SC  =O(1)
+	 */
 	void bubblesort(int arr[]) {
 		int size=arr.length;
 		for(int i=0;i<size;i++) {
