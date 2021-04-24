@@ -18,7 +18,7 @@ public class SelectionSort {
 		int tempIndex;
 		for(int i=0;i<size;i++) {
 			tempIndex=i;
-			min=Integer.MAX_VALUE;
+			min=arr[i];
 			for(int j=i;j<size;j++) {
 				if(min>arr[j]) {
 					min=arr[j];
