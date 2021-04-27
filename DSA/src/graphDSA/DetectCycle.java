@@ -32,7 +32,7 @@ public class DetectCycle {
 	}
 
 	/*
-	 * Detect cycle in undirected graph T.C=O(V+E) S.C=O(N)
+	 * Detect cycle in directed graph T.C=O(V+E) S.C=O(N)
 	 */
 	boolean detectCycledirected(ArrayList<Integer> G[]) {
 		int[] vis = new int[G.length];
