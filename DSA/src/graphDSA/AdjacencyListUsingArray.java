@@ -3,12 +3,15 @@ package graphDSA;
 import java.util.ArrayList;
 
 public class AdjacencyListUsingArray {
-	ArrayList<Integer> G[];
+	private ArrayList<Integer> G[];
 	public AdjacencyListUsingArray(int verices) {
 		G=new ArrayList[verices];
 		for(int i=0;i<verices;i++) {
 			G[i]=new ArrayList<Integer>();
 		}
+	}
+	ArrayList<Integer>[] getGraph() {
+		return G;
 	}
 	
 	//add edge
@@ -43,6 +46,7 @@ public class AdjacencyListUsingArray {
 	 public String toString() { 
 		 StringBuilder sb=new StringBuilder();
 		 for(int i=0;i<G.length;i++) {
+			 sb.append(i+"-> ");
 			 for(int j=0;j<G[i].size();j++) {
 				 sb.append(G[i].get(j)+" ");
 			 }
