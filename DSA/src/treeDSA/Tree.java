@@ -26,6 +26,13 @@ public class Tree {
 		treeTraversal.levelOrderBTRL(root);
 		treeTraversal.zig_zag(root);
 		
+		//Advanced Tree Traversal
+		AdvancedTreeTraversals advancedTreeTraversals=new AdvancedTreeTraversals();
+		//Vertical Order Traversal
+		advancedTreeTraversals.verticalTraversal(root);
+		advancedTreeTraversals.diagonalTraversal(root);
+		
+		
 	}
 
 }
