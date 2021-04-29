@@ -1,11 +1,17 @@
 package graphDSA;
 // Adjacency matrix of weighted graph
 public class WeightedGraphAM {
-	int V;
-	int[][] G;
+	private int V;
+	private int[][] G;
 	public WeightedGraphAM(int noOfvertices) {
 		this.V=noOfvertices;
 		this.G=new int[V][V];
+	}
+	int[][] getGraph() {
+		return G;
+	}
+	int getTotalNode() {
+		return V;
 	}
 	//add edge
 	void addEdge(int source,int destination,boolean directed,int weight) {
