@@ -54,7 +54,6 @@ public class DiskstraAlgorithm {
 		TreeMap<Integer, Integer> treeMap=new TreeMap<Integer, Integer>();
 		treeMap.put(dist[source], source);
 		Map.Entry<Integer, Integer> temp;
-		int min;
 		int node;
 		while(!treeMap.isEmpty()) {
 			temp=treeMap.pollFirstEntry();
