@@ -5,11 +5,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AdjacencyListGraph_Map {
-	Map<Integer, ArrayList<Integer>> G;
+	private Map<Integer, ArrayList<Integer>> G;
 	public AdjacencyListGraph_Map() {
 		G=new HashMap<Integer, ArrayList<Integer>>();
 	}
-	
+	Map<Integer, ArrayList<Integer>> getGraph(){
+		return G;
+	}
+	int totalVertex() {
+		return G.size();
+	}
 	//add edge
 	void addEdge(int source,int destination,boolean directed) {
 		if(G.containsKey(source)) {
