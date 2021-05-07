@@ -14,9 +14,9 @@ public class BuildBST {
 		root=bst.insert(root, 33);
 		root=bst.insert(root, 37);
 		System.out.println(bst.toString(root));
-		System.out.println(bst.searchBST(root, 30));
 		System.out.println(bst.searchBST(root, 27));
 		System.out.println(bst.searchBST(root, 26));
-		System.out.println(bst.searchBST(root, 37));
+		System.out.println("Maximum element: "+bst.maxBST(root));
+		System.out.println("Minimum element: "+bst.minBST(root));
 	}
 }

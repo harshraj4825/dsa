@@ -28,6 +28,20 @@ public class BST {
 		else if(val<root.val)return searchBST(root.left,val);
 		else return searchBST(root.right,val);
 	}
+	//Searching maximum in BST
+	int maxBST(Node root) {
+		if(root==null)return -1;
+		if(root.left==null&&root.right==null)return root.val;
+		else if(root.right!=null)return maxBST(root.right);
+		else return maxBST(root.left);
+	}
+	//Searching minimum in BST
+	int minBST(Node root) {
+		if(root==null)return -1;
+		if(root.left==null&&root.right==null)return root.val;
+		else if(root.left!=null)return minBST(root.left);
+		else return minBST(root.right);
+	}
 	//print BST
 	String toString(Node root) {
 		StringBuilder sb=new StringBuilder();
