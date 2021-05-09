@@ -10,17 +10,6 @@ public class BST {
 			right=null;
 		}
 	}
-	//insert in BST
-	Node insert(Node root,int val) {
-		if(root==null) return new Node(val);
-		if(val==root.val)return root;
-		if(val<root.val)root.left=insert(root.left,val);
-		if(val>root.val)root.right=insert(root.right,val);
-		return root;
-	}
-//	Node delete(Node root,int val) {
-//		
-//	}
 	//search in BST
 	boolean searchBST(Node root,int val) {
 		if(root==null)return false;
@@ -42,6 +31,48 @@ public class BST {
 		else if(root.left!=null)return minBST(root.left);
 		else return minBST(root.right);
 	}
+	//insert in BST
+	Node insert(Node root,int val) {
+		if(root==null) return new Node(val);
+		if(val==root.val)return root;
+		if(val<root.val)root.left=insert(root.left,val);
+		if(val>root.val)root.right=insert(root.right,val);
+		return root;
+	}
+	//Deletion in BST
+	Node deleteNode(Node root,int val) {
+		if(root==null)return null;
+		if(root.val==val) {
+			if(root.left==null && root.right==null) {
+				root=null;
+			}
+			else if(root.left!=null && root.right!=null) {
+				Node temp=util(root.left);
+				root.val=temp.val;
+				root.left=deleteNode(root.left,temp.val);
+				return root;
+			}
+			else if(root.left!=null) {
+				return root.left;
+			}
+			else {
+				return root.right;
+			}
+		}
+		else if(val<root.val) {
+			root.left=deleteNode(root.left,val);
+		}else {
+			root.right=deleteNode(root.right,val);
+		}
+		return root;
+	}
+	Node util(Node root) {
+		if(root==null)return null;
+		if(root.left==null&&root.right==null)return root;
+		else if(root.left!=null)return util(root.left);
+		else return util(root.right);
+	}
+
 	//print BST
 	String toString(Node root) {
 		StringBuilder sb=new StringBuilder();
