@@ -1,11 +1,11 @@
 package treeDSA;
 
+
 import java.util.ArrayList;
+import helperUtil.Node;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
-
-import treeDSA.MyBinaryTree.Node;
 
 public class AdvancedTreeTraversals {
 	class Pair{

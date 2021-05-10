@@ -1,21 +1,14 @@
 package treeDSA;
 
 import java.util.Scanner;
+import helperUtil.Node;
 
 public class MyBinaryTree {
 	private StringBuilder sb = new StringBuilder();
 	private Scanner sc = new Scanner(System.in);
 
-	class Node {
-		Node left, right;
-		int data;
-
-		public Node(int data) {
-			this.data = data;
-		}
-	}
-
-	Node createTree() {
+	
+	public Node createTree() {
 		System.out.println("Enter Value: ");
 		int data = sc.nextInt();
 		if (data == -1)
@@ -28,7 +21,7 @@ public class MyBinaryTree {
 		return root;
 	}
 
-	String printBT(Node root) {
+	public String printBT(Node root) {
 		if (root == null)
 			return sb.append(-1 + " ").toString();
 		sb.append(root.data + " ");

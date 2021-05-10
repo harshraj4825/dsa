@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-import treeDSA.MyBinaryTree.Node;
+import helperUtil.Node;
 
 public class TreeTraversals {
 	// DFS

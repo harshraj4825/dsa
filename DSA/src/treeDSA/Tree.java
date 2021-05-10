@@ -1,10 +1,11 @@
 package treeDSA;
+import helperUtil.Node;
 
 public class Tree {
 
 	public static void main(String[] args) {
 		MyBinaryTree bt=new MyBinaryTree();
-		MyBinaryTree.Node root =bt.createTree();
+		Node root =bt.createTree();
 		System.out.println(bt.printBT(root));
 		
 		TreeTraversals treeTraversal=new TreeTraversals();

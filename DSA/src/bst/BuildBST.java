@@ -1,6 +1,6 @@
 package bst;
 
-import bst.BST.Node;
+import helperUtil.Node;
 
 public class BuildBST {
 	public static void main(String[] args) {
