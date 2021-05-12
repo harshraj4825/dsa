@@ -10,6 +10,7 @@ class Node{
 }
 public class SinglyLinkedList {
 	Node head=null;
+	//insert at end
 	void insertAtEnd(int data) {
 		if(head==null) {
 			head=new Node(data);
@@ -21,6 +22,44 @@ public class SinglyLinkedList {
 		}
 		temp.next=new Node(data);
 	}
+	//insert at start
+	void insertAtBeginning(int data) {
+		if(head==null) {
+			head=new Node(data);
+			return;
+		}
+		Node temp=new Node(data);
+		temp.next=head;
+		head=temp;
+		
+	}
+	//insert at a index
+	//index start from 0
+	void insertAtIndex(int index,int data) {
+		int count=0;
+		
+		Node inNode=new Node(data);
+		if(index==0){
+			inNode.next=head;
+			head=inNode;
+			return;
+		}
+		else if(index>getSize()) {
+			System.out.println("indexOutofBound");
+			System.out.println("Please insert at index <= "+getSize());
+			return;
+		}
+		Node temp=head;
+		Node preVious=null;
+		while(count<index) {
+			count++;
+			preVious=temp;
+			temp=temp.next;
+		}
+		inNode.next=temp;
+		preVious.next=inNode;
+	}
+	//get size of LinkedList
 	int getSize() {
 		int count=0;
 		Node temp=head;
@@ -47,6 +86,7 @@ public class SinglyLinkedList {
 		ll.printLL();
 		int size=ll.getSize();
 		System.out.println("Size of LinkedList: "+size);
+		
 		ll.insertAtEnd(8);
 		ll.printLL();
 		size=ll.getSize();
@@ -56,6 +96,29 @@ public class SinglyLinkedList {
 		ll.printLL();
 		size=ll.getSize();
 		System.out.println("Size of LinkedList: "+size);
+		
+		ll.insertAtBeginning(15);
+		ll.printLL();
+		size=ll.getSize();
+		System.out.println("Size of LinkedList: "+size);
+		
+		ll.insertAtIndex(0, 20);
+		ll.printLL();
+		size=ll.getSize();
+		System.out.println("Size of LinkedList: "+size);
+		ll.insertAtIndex(2, 25);
+		ll.printLL();
+		size=ll.getSize();
+		System.out.println("Size of LinkedList: "+size);
+		ll.insertAtIndex(6, 50);
+		ll.printLL();
+		size=ll.getSize();
+		System.out.println("Size of LinkedList: "+size);
+		ll.insertAtIndex(8, 50);
+		ll.printLL();
+		size=ll.getSize();
+		System.out.println("Size of LinkedList: "+size);
+		
 	}
 	
 
