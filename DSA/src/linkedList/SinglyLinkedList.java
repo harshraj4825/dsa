@@ -59,6 +59,19 @@ public class SinglyLinkedList {
 		inNode.next=temp;
 		preVious.next=inNode;
 	}
+	//reverse LinledList
+	void reverse() {
+		Node temp=head;
+		Node preVious=null;
+		Node next=head;
+		while(temp!=null) {
+			next=temp.next;
+			temp.next=preVious;
+			preVious=temp;
+			temp=next;
+		}
+		head=preVious;
+	}
 	//get size of LinkedList
 	int getSize() {
 		int count=0;
@@ -115,6 +128,11 @@ public class SinglyLinkedList {
 		size=ll.getSize();
 		System.out.println("Size of LinkedList: "+size);
 		ll.insertAtIndex(8, 50);
+		ll.printLL();
+		size=ll.getSize();
+		System.out.println("Size of LinkedList: "+size);
+		
+		ll.reverse();
 		ll.printLL();
 		size=ll.getSize();
 		System.out.println("Size of LinkedList: "+size);
