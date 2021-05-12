@@ -1,14 +1,15 @@
 package linkedList;
 
-class Node{
-	int data;
-	Node next;
-	public Node(int data) {
-		this.data=data;
-		this.next=null;
-	}
-}
+
 public class SinglyLinkedList {
+	class Node{
+		int data;
+		Node next;
+		public Node(int data) {
+			this.data=data;
+			this.next=null;
+		}
+	}
 	Node head=null;
 	//insert at end
 	void insertAtEnd(int data) {
